@@ -19,7 +19,7 @@ hamburger.addEventListener("click", () => {
 });
 
 /* ================= SCROLL REVEAL ================= */
-const revealEls = document.querySelectorAll(".reveal, .reveal-scale");
+const revealEls = document.querySelectorAll(".reveal, .reveal-scale, .split-text, .mask-reveal");
 
 const observer = new IntersectionObserver(
     entries => {
@@ -30,7 +30,8 @@ const observer = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.15 }
-);
-
+    {
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px"
+    });
 revealEls.forEach(el => observer.observe(el));

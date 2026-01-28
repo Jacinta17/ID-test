@@ -18,6 +18,7 @@ body {
     background: var(--bg);
     color: var(--black);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* ------------------- NAV ------------------- */
@@ -52,9 +53,11 @@ body {
 /* ------------------- HAMBURGER ------------------- */
 .hamburger {
     display: none;
+    cursor: pointer;
 }
 
 .hamburger span {
+    display: block;
     width: 26px;
     height: 2px;
     background: var(--white);
@@ -119,6 +122,11 @@ body {
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:active {
+    transform: scale(0.96);
 }
 
 /* ------------------- ABOUT ------------------- */
@@ -162,10 +170,19 @@ body {
     gap: 30px;
 }
 
+/* Shared card style (FIXED) */
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
 .service-icon {
     width: 36px;
     height: 36px;
-    fill: #91766E;
+    fill: var(--primary);
     margin-bottom: 12px;
     transition: transform 0.3s ease;
 }
@@ -173,7 +190,6 @@ body {
 .card:hover .service-icon {
     transform: rotate(15deg) scale(1.1);
 }
-
 
 /* ------------------- PORTFOLIO ------------------- */
 .portfolio {
@@ -261,15 +277,15 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-color: #91766E;
-    box-shadow: 0 0 8px rgba(102, 209, 192, 0.3);
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(145, 118, 110, 0.35);
     outline: none;
 }
 
 /* ------------------- FOOTER ------------------- */
 .footer {
-    background: #91766E;
-    color: #ffffff;
+    background: var(--primary);
+    color: var(--white);
     text-align: center;
     padding: 40px 20px;
 }
@@ -280,7 +296,6 @@ textarea:focus {
     gap: 30px;
     flex-wrap: wrap;
 }
-
 
 /* ------------------- POPUP ------------------- */
 .popup-overlay {
@@ -293,6 +308,7 @@ textarea:focus {
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .popup-overlay.active {
@@ -301,7 +317,7 @@ textarea:focus {
 }
 
 .popup {
-    background: #ffffff;
+    background: var(--white);
     padding: 40px 30px;
     max-width: 420px;
     width: 90%;
@@ -309,6 +325,7 @@ textarea:focus {
     position: relative;
     text-align: center;
     transform: translateY(-30px);
+    transition: transform 0.45s ease;
 }
 
 .popup-overlay.active .popup {
@@ -375,5 +392,44 @@ textarea:focus {
 
     .hero-overlay h1 {
         font-size: 2.3rem;
+    }
+}
+
+/* ================= SPLIT TEXT ================= */
+.split-text span {
+    display: block;
+    overflow: hidden;
+}
+
+.split-text span i {
+    display: inline-block;
+    transform: translateY(120%);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.split-text.active span i {
+    transform: translateY(0);
+}
+
+/* ================= DEPTH LIFT ================= */
+@media (hover: hover) {
+
+    .portfolio-card,
+    .card {
+        transition: transform 0.45s ease, box-shadow 0.45s ease;
+    }
+
+    .portfolio-card:hover,
+    .card:hover {
+        transform: translateY(-10px) scale(1.015);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    .portfolio-card img {
+        transition: transform 0.6s ease;
+    }
+
+    .portfolio-card:hover img {
+        transform: scale(1.08);
     }
 }
