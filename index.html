@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Studio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ================= NAV ================= -->
+    <header class="navbar">
+        <div class="logo">Studio</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="Images/intro.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-overlay reveal">
+            <h1>Designing Spaces That Inspire</h1>
+            <p>Luxury interiors crafted with purpose</p>
+            <a href="#contact" class="btn">Get Consultation</a>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about">
+        <img src="Images/hero.jpg" alt="" class="reveal-scale" />
+        <div class="about-text reveal">
+            <h2>About Us</h2>
+            <p>We create thoughtful interior experiences blending aesthetics and functionality.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="card">
+                <!-- Residential Icon -->
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.1 2.7-.2 5.4-.8 8.1-5.5 20.7-24.4 35.6-46 35.6H112c-21.6 0-40.5-14.9-46-35.6-.6-2.7-.9-5.4-.8-8.1l.7-160.2H32c-18 0-32-14-32-32.1 0-9.5 4-18.5 11-24.7l256-208c11.8-9.6 28.7-9.6 40.5 0l256 208c7 6.2 11.3 15.2 11.3 24.7z" />
+                </svg>
+                <h3>Residential Interiors</h3>
+                <p>Luxury homes, apartments & villas designed to perfection.</p>
+            </div>
+            <div class="card">
+                <!-- Residential Icon -->
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.1 2.7-.2 5.4-.8 8.1-5.5 20.7-24.4 35.6-46 35.6H112c-21.6 0-40.5-14.9-46-35.6-.6-2.7-.9-5.4-.8-8.1l.7-160.2H32c-18 0-32-14-32-32.1 0-9.5 4-18.5 11-24.7l256-208c11.8-9.6 28.7-9.6 40.5 0l256 208c7 6.2 11.3 15.2 11.3 24.7z" />
+                </svg>
+                <h3>Commercial Design</h3>
+                <p>Offices, cafes & retail spaces that elevate your brand.</p>
+            </div>
+            <div class="card">
+                <!-- Residential Icon -->
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.1 2.7-.2 5.4-.8 8.1-5.5 20.7-24.4 35.6-46 35.6H112c-21.6 0-40.5-14.9-46-35.6-.6-2.7-.9-5.4-.8-8.1l.7-160.2H32c-18 0-32-14-32-32.1 0-9.5 4-18.5 11-24.7l256-208c11.8-9.6 28.7-9.6 40.5 0l256 208c7 6.2 11.3 15.2 11.3 24.7z" />
+                </svg>
+                <h3>Turnkey Projects</h3>
+                <p>Complete design & execution with stress-free delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= OUR WORK ================= -->
+    <section class="portfolio">
+        <h2 class="reveal">Our Work</h2>
+
+        <div class="gallery">
+            <div class="portfolio-card reveal-scale">
+                <img src="Images/design1.jpg" />
+                <div class="portfolio-info">
+                    <h3>Modern Living Room</h3>
+                    <p>Bangalore</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card reveal-scale">
+                <img src="Images/design2.jpg" />
+                <div class="portfolio-info">
+                    <h3>Luxury Bedroom</h3>
+                    <p>Bangalore</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card reveal-scale">
+                <img src="Images/design3.jpg" />
+                <div class="portfolio-info">
+                    <h3>Café Interior</h3>
+                    <p>Bangalore</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card reveal-scale">
+                <img src="Images/design4.jpg" />
+                <div class="portfolio-info">
+                    <h3>Office Workspace</h3>
+                    <p>Bangalore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose">
+        <h2>Why Choose Us</h2>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <svg class="why-icon" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                </svg>
+                <h3>Premium Design</h3>
+                <p>Thoughtfully crafted interiors with high-quality finishes.</p>
+            </div>
+
+            <div class="why-card">
+                <svg class="why-icon" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                </svg>
+                <h3>Experienced Team</h3>
+                <p>Designers, project managers & skilled execution teams.</p>
+            </div>
+
+            <div class="why-card">
+                <svg class="why-icon" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                </svg>
+                <h3>End-to-End Delivery</h3>
+                <p>From concept to completion — stress-free execution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Start Your Project</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <textarea placeholder="Tell us about your project" required></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <p id="formStatus"></p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Interior Design</p>
+
+        <div class="footer-links">
+            <a href="#Instagram" target="_blank">Instagram</a>
+            <a href="#Facebook" target="_blank">Facebook</a>
+        </div>
+    </footer>
+
+    <!-- CONSULTATION POPUP -->
+    <div class="popup-overlay" id="consultPopup">
+        <div class="popup">
+            <button class="popup-close" id="closePopup">&times;</button>
+
+            <h2>Book a Free Consultation</h2>
+            <p>Speak with our design experts today</p>
+
+            <form id="popupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required pattern="\d{10}"
+                    title="Please enter a 10-digit phone number">
+                <textarea placeholder="Tell us about your project" required></textarea>
+                <button type="submit" class="btn">Request Callback</button>
+            </form>
+
+            <p id="popupStatus"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
