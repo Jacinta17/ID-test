@@ -15,9 +15,9 @@
         <div class="logo">Studio</div>
 
         <ul class="nav-links" id="navLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
@@ -86,42 +86,44 @@
     </section>
 
     <!-- ================= OUR WORK ================= -->
-    <section class="portfolio">
-        <h2 class="split-text reveal">Our Work</h2>
-
-        <div class="gallery">
-            <div class="portfolio-card reveal-scale">
-                <img src="Images/design1.jpg" />
-                <div class="portfolio-info">
-                    <h3>Modern Living Room</h3>
-                    <p>Bangalore</p>
-                </div>
+    <section class="carousel-section">
+        <h1 class="split-text reveal">Our work</h1>
+        <div class="carousel-container">
+            <div class="carousel">
+                <!-- Items are now Anchor tags with hrefs and titles -->
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/design1.jpg" alt="Interior">
+                    <div class="project-title">The Minimalist Suite</div>
+                </a>
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/design2.jpg" alt="Interior">
+                    <div class="project-title">Ocean View Office</div>
+                </a>
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/design3.jpg" alt="Interior">
+                    <div class="project-title">Urban Loft</div>
+                </a>
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/design4.jpg" alt="Interior">
+                    <div class="project-title">Hero Residence</div>
+                </a>
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/hero.jpg" alt="Interior">
+                    <div class="project-title">Grand Atrium</div>
+                </a>
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/design1.jpg" alt="Interior">
+                    <div class="project-title">Suite Redux</div>
+                </a>
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/design3.jpg" alt="Interior">
+                    <div class="project-title">Loft 2.0</div>
+                </a>
+                <a href="work.html" class="carousel-item">
+                    <img src="Images/design2.jpg" alt="Interior">
+                    <div class="project-title">View Office B</div>
+                </a>
             </div>
-
-            <div class="portfolio-card reveal-scale">
-                <img src="Images/design2.jpg" />
-                <div class="portfolio-info">
-                    <h3>Luxury Bedroom</h3>
-                    <p>Bangalore</p>
-                </div>
-            </div>
-
-            <div class="portfolio-card reveal-scale">
-                <img src="Images/design3.jpg" />
-                <div class="portfolio-info">
-                    <h3>Café Interior</h3>
-                    <p>Bangalore</p>
-                </div>
-            </div>
-
-            <div class="portfolio-card reveal-scale">
-                <img src="Images/design4.jpg" />
-                <div class="portfolio-info">
-                    <h3>Office Workspace</h3>
-                    <p>Bangalore</p>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- WHY CHOOSE US -->
@@ -199,6 +201,7 @@
             <p id="popupStatus"></p>
         </div>
     </div>
+
 
     <script src="script.js"></script>
 </body>

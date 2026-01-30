@@ -1,23 +1,3 @@
-/* ================= POPUP ================= */
-const popup = document.getElementById("consultPopup");
-const closePopup = document.getElementById("closePopup");
-
-window.addEventListener("load", () => {
-    setTimeout(() => popup.classList.add("active"), 600);
-});
-
-closePopup.addEventListener("click", () => {
-    popup.classList.remove("active");
-});
-
-/* ================= HAMBURGER ================= */
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
 /* ================= SCROLL REVEAL ================= */
 const revealEls = document.querySelectorAll(".reveal, .reveal-scale, .split-text, .mask-reveal");
 
@@ -35,3 +15,28 @@ const observer = new IntersectionObserver(
         rootMargin: "0px 0px -10% 0px"
     });
 revealEls.forEach(el => observer.observe(el));
+
+// JS remains the same as it correctly selects '.carousel-item'
+const items = document.querySelectorAll('.carousel-item');
+const numItems = items.length;
+const rotateYInterval = 360 / numItems;
+const radius = 350; /* Adjust this value to change circle size */
+
+items.forEach((item, index) => {
+    const angle = rotateYInterval * index;
+    item.style.transform =
+        `rotateY(${angle}deg) translateZ(${radius}px)`;
+});
+
+
+/* POPUP */
+const popup = document.getElementById("consultPopup");
+const closePopup = document.getElementById("closePopup");
+
+window.addEventListener("load", () => {
+    setTimeout(() => popup?.classList.add("active"), 600);
+});
+
+closePopup?.addEventListener("click", () => {
+    popup.classList.remove("active");
+});

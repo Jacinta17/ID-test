@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    l
+    <link rel="stylesheet" href="style.css" />
+    <script src="bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Top spacing for navbar + hero gap */
+        .page-wrapper {
+            padding-top: 120px;
+            /* adjust if navbar height changes */
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .main {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #B7A7A9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+
+        /* Hamburger stays right */
+        .hamburger {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAV ================= -->
+    <header class="main">
+        <div class="logo">Studio</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- PAGE CONTENT WRAPPER -->
+    <div class="container page-wrapper">
+
+        <!-- OPTIONAL HEADING / CONTENT SPACE -->
+        <div class="mb-5">
+            <h1 class="fw-light">Interior Design <strong>Workspaces</strong></h1>
+            <p class="text-muted">
+                Spaces that think smarter and perform harder, backed by insights and built for scale.
+            </p>
+        </div>
+
+        <!-- CARD ROW -->
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100">
+                    <img src="Images/design1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Project One</h5>
+                        <p class="card-text">Short project description.</p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100">
+                    <img src="Images/design2.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Two</h5>
+                        <p class="card-text">Short project description.</p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100">
+                    <img src="Images/design3.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Three</h5>
+                        <p class="card-text">Short project description.</p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100">
+                    <img src="Images/design4.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Four</h5>
+                        <p class="card-text">Short project description.</p>
+                        <a href="#" class="btn btn-outline-dark btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2026 Interior Design</p>
+
+    <div class="footer-links">
+        <a href="#Instagram" target="_blank">Instagram</a>
+        <a href="#Facebook" target="_blank">Facebook</a>
+    </div>
+</footer>
+
+</html>

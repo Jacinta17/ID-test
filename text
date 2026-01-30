@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Fancy Website</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAV -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">YourBrand</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Designing Workspaces<br>with Purpose & Style</h1>
+            <p>We deliver inspiring interior and architectural solutions.</p>
+            <a href="#contact" class="btn btn-primary">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services container">
+        <h2>Our Expertise</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Design</h3>
+                <p>Innovative workspace & interior design.</p>
+            </div>
+            <div class="service-card">
+                <h3>Architecture</h3>
+                <p>Functional and elegant architectural solutions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Delivery</h3>
+                <p>Timely implementation with quality precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Items are now Anchor tags with hrefs and titles -->
+            <a href="project1-details.html" class="carousel-item">
+                <img src="Images/design1.jpg" alt="Interior">
+                <div class="project-title">The Minimalist Suite</div>
+            </a>
+            <a href="project2-details.html" class="carousel-item">
+                <img src="Images/design2.jpg" alt="Interior">
+                <div class="project-title">Ocean View Office</div>
+            </a>
+            <a href="project3-details.html" class="carousel-item">
+                <img src="Images/design3.jpg" alt="Interior">
+                <div class="project-title">Urban Loft</div>
+            </a>
+            <a href="project4-details.html" class="carousel-item">
+                <img src="Images/design4.jpg" alt="Interior">
+                <div class="project-title">Hero Residence</div>
+            </a>
+            <a href="project5-details.html" class="carousel-item">
+                <img src="Images/hero.jpg" alt="Interior">
+                <div class="project-title">Grand Atrium</div>
+            </a>
+            <a href="project6-details.html" class="carousel-item">
+                <img src="Images/design1.jpg" alt="Interior">
+                <div class="project-title">Suite Redux</div>
+            </a>
+            <a href="project7-details.html" class="carousel-item">
+                <img src="Images/design3.jpg" alt="Interior">
+                <div class="project-title">Loft 2.0</div>
+            </a>
+            <a href="project8-details.html" class="carousel-item">
+                <img src="Images/design2.jpg" alt="Interior">
+                <div class="project-title">View Office B</div>
+            </a>
+        </div>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about container">
+            <h2>Who We Are</h2>
+            <p>
+                A team of creative designers and builders delivering spaces that inspire.
+            </p>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit" class="btn btn-secondary">Send Message</button>
+            </form>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2026 Your Brand. All Rights Reserved.</p>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+--------------------------------------------------------------------------------------------
+
+:root {
+--black: #000000;
+--primary: #91766E;
+--secondary: #B7A7A9;
+--bg: #F6ECE3;
+--white: #FFFFFF;
+}
+
+/* ------------------- RESET ------------------- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+background: var(--bg);
+color: var(--black);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* ------------------- NAV ------------------- */
+.navbar {
+position: absolute;
+top: 0;
+width: 100%;
+padding: 20px 10%;
+display: flex;
+align-items: center;
+z-index: 1000;
+}
+
+.logo {
+color: var(--white);
+font-weight: 600;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 40px;
+margin-left: auto;
+}
+
+.nav-links a {
+color: var(--white);
+text-decoration: none;
+font-size: 0.95rem;
+}
+
+/* ------------------- HAMBURGER ------------------- */
+.hamburger {
+display: none;
+cursor: pointer;
+}
+
+.hamburger span {
+display: block;
+width: 26px;
+height: 2px;
+background: var(--white);
+}
+
+/* ------------------- HERO ------------------- */
+.hero {
+height: 100vh;
+position: relative;
+overflow: hidden;
+}
+
+.hero video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: brightness(0.6);
+animation: heroZoom 16s ease-in-out infinite;
+}
+
+@keyframes heroZoom {
+
+0%,
+100% {
+transform: scale(1);
+}
+
+50% {
+transform: scale(1.06);
+}
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: var(--white);
+padding: 20px;
+}
+
+.hero-overlay h1 {
+font-size: 3.5rem;
+}
+
+.hero-overlay p {
+font-size: 1.3rem;
+margin-top: 10px;
+}
+
+/* ------------------- BUTTON ------------------- */
+/* BUTTONS with SHIMMER EFFECT */
+.btn {
+background: #91766E;
+color: #fff;
+padding: 14px 30px;
+text-decoration: none;
+border-radius: 30px;
+font-weight: 600;
+box-shadow: 0 6px 15px rgba(145, 118, 110, 0.4);
+transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+position: relative;
+overflow: hidden;
+display: inline-block;
+}
+
+/* Shimmer Layer */
+.btn::after {
+content: "";
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+transition: 0.5s;
+}
+
+.btn:hover::after {
+left: 100%;
+}
+
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 25px rgba(102, 209, 192, 0.6);
+background-color: #B7A7A9;
+}
+
+/* Mobile Touch Physics */
+.btn:active {
+transform: scale(0.96);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------- ABOUT ------------------- */
+.about {
+padding: 80px 10%;
+display: flex;
+gap: 50px;
+align-items: center;
+}
+
+.about img {
+max-width: 500px;
+width: 100%;
+border-radius: 16px;
+}
+
+.about-text {
+max-width: 500px;
+}
+
+.about-text h2 {
+font-size: 2.5rem;
+margin-bottom: 12px;
+}
+
+/* ------------------- SERVICES ------------------- */
+.services {
+padding: 80px 10%;
+background: #f6f6f6;
+text-align: center;
+}
+
+.services h2 {
+font-size: 2.5rem;
+margin-bottom: 40px;
+}
+
+.service-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+}
+
+/* Shared card style (FIXED) */
+.card {
+background: var(--white);
+padding: 30px;
+border-radius: 18px;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+text-align: left;
+}
+
+.service-icon {
+width: 36px;
+height: 36px;
+fill: var(--primary);
+margin-bottom: 12px;
+transition: transform 0.3s ease;
+}
+
+.card:hover .service-icon {
+transform: rotate(15deg) scale(1.1);
+}
+
+/* ------------------- PORTFOLIO ------------------- */
+.portfolio {
+padding: 80px 10%;
+text-align: center;
+}
+
+.gallery {
+margin-top: 40px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 30px;
+}
+
+.portfolio-card {
+background: var(--white);
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card img {
+width: 100%;
+height: 260px;
+object-fit: cover;
+}
+
+.portfolio-info {
+padding: 20px;
+text-align: left;
+}
+
+.portfolio-info h3 {
+margin-bottom: 4px;
+}
+
+/* ------------------- WHY CHOOSE ------------------- */
+.why-choose {
+padding: 80px 10%;
+background: var(--white);
+text-align: center;
+}
+
+.why-grid {
+margin-top: 40px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 40px;
+}
+
+.why-card {
+background: var(--white);
+padding: 30px;
+border-radius: 16px;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.why-icon {
+width: 40px;
+height: 40px;
+fill: var(--primary);
+margin-bottom: 15px;
+}
+
+/* ------------------- CONTACT ------------------- */
+.contact {
+padding: 80px 10%;
+background: #fafafa;
+text-align: center;
+}
+
+form {
+max-width: 500px;
+margin: auto;
+}
+
+input,
+textarea {
+width: 100%;
+padding: 14px;
+margin-bottom: 15px;
+border-radius: 8px;
+border: 1px solid #ccc;
+}
+
+input:focus,
+textarea:focus {
+border-color: var(--primary);
+box-shadow: 0 0 8px rgba(145, 118, 110, 0.35);
+outline: none;
+}
+
+/* ------------------- FOOTER ------------------- */
+.footer {
+background: var(--primary);
+color: var(--white);
+text-align: center;
+padding: 40px 20px;
+}
+
+.footer-links {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+/* ------------------- POPUP ------------------- */
+.popup-overlay {
+position: fixed;
+inset: 0;
+background: rgba(0, 0, 0, 0.65);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.popup-overlay.active {
+opacity: 1;
+visibility: visible;
+}
+
+.popup {
+background: var(--white);
+padding: 40px 30px;
+max-width: 420px;
+width: 90%;
+border-radius: 16px;
+position: relative;
+text-align: center;
+transform: translateY(-30px);
+transition: transform 0.45s ease;
+}
+
+.popup-overlay.active .popup {
+transform: translateY(0);
+}
+
+.popup-close {
+position: absolute;
+top: 12px;
+right: 15px;
+font-size: 26px;
+background: none;
+border: none;
+cursor: pointer;
+}
+
+/* ------------------- SCROLL ANIMATIONS ------------------- */
+.reveal,
+.reveal-scale {
+opacity: 0;
+transform: translateY(40px);
+transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-scale {
+transform: translateY(40px) scale(0.96);
+}
+
+.reveal.active,
+.reveal-scale.active {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+
+/* ------------------- MOBILE ------------------- */
+@media (max-width: 768px) {
+.hamburger {
+display: flex;
+flex-direction: column;
+gap: 6px;
+margin-left: auto;
+}
+
+.nav-links {
+display: none;
+}
+
+.nav-links.active {
+display: flex;
+flex-direction: column;
+background: var(--black);
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+padding: 30px 0;
+text-align: center;
+}
+
+.about {
+flex-direction: column;
+}
+
+.hero-overlay h1 {
+font-size: 2.3rem;
+}
+}
+
+/* ================= SPLIT TEXT ================= */
+.split-text span {
+display: block;
+overflow: hidden;
+}
+
+.split-text span i {
+display: inline-block;
+transform: translateY(120%);
+transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.split-text.active span i {
+transform: translateY(0);
+}
+
+/* ================= DEPTH LIFT ================= */
+@media (hover: hover) {
+
+.portfolio-card,
+.card {
+transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.portfolio-card:hover,
+.card:hover {
+transform: translateY(-10px) scale(1.015);
+box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+.portfolio-card img {
+transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover img {
+transform: scale(1.08);
+}
+}
+
+----------------------------------------------------------------------------------------------------
+
+/* ================= POPUP ================= */
+const popup = document.getElementById("consultPopup");
+const closePopup = document.getElementById("closePopup");
+
+window.addEventListener("load", () => {
+setTimeout(() => popup.classList.add("active"), 600);
+});
+
+closePopup.addEventListener("click", () => {
+popup.classList.remove("active");
+});
+
+/* ================= HAMBURGER ================= */
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+/* ================= SCROLL REVEAL ================= */
+const revealEls = document.querySelectorAll(".reveal, .reveal-scale, .split-text, .mask-reveal");
+
+const observer = new IntersectionObserver(
+entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add("active");
+observer.unobserve(entry.target);
+}
+});
+},
+{
+threshold: 0.1,
+rootMargin: "0px 0px -10% 0px"
+});
+revealEls.forEach(el => observer.observe(el));
+
+
+---------=================================--------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Spinning Gallery with Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: spin 35s infinite linear;
+        }
+
+        .carousel-container:hover .carousel {
+            animation-play-state: paused;
+        }
+
+        /* The item itself is now an anchor link */
+        .carousel-item {
+            position: absolute;
+            width: 300px;
+            height: 250px;
+            /* INCREASED HEIGHT to fit text */
+            /* overflow: hidden;  <-- REMOVED THIS LINE */
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, opacity 0.5s;
+            left: 0;
+            top: 50px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            /* Use flexbox to stack image and text */
+            flex-direction: column;
+            background-color: #fff;
+            /* Added a background for the text area */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 200px;
+            /* Fixed height for image part */
+            object-fit: cover;
+        }
+
+        .project-title {
+            /* Position static within the flex container */
+            text-align: center;
+            color: #333;
+            font-size: 1rem;
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Items are now Anchor tags with hrefs and titles -->
+            <a href="project1-details.html" class="carousel-item">
+                <img src="Images/design1.jpg" alt="Interior">
+                <div class="project-title">The Minimalist Suite</div>
+            </a>
+            <a href="project2-details.html" class="carousel-item">
+                <img src="Images/design2.jpg" alt="Interior">
+                <div class="project-title">Ocean View Office</div>
+            </a>
+            <a href="project3-details.html" class="carousel-item">
+                <img src="Images/design3.jpg" alt="Interior">
+                <div class="project-title">Urban Loft</div>
+            </a>
+            <a href="project4-details.html" class="carousel-item">
+                <img src="Images/design4.jpg" alt="Interior">
+                <div class="project-title">Hero Residence</div>
+            </a>
+            <a href="project5-details.html" class="carousel-item">
+                <img src="Images/hero.jpg" alt="Interior">
+                <div class="project-title">Grand Atrium</div>
+            </a>
+            <a href="project6-details.html" class="carousel-item">
+                <img src="Images/design1.jpg" alt="Interior">
+                <div class="project-title">Suite Redux</div>
+            </a>
+            <a href="project7-details.html" class="carousel-item">
+                <img src="Images/design3.jpg" alt="Interior">
+                <div class="project-title">Loft 2.0</div>
+            </a>
+            <a href="project8-details.html" class="carousel-item">
+                <img src="Images/design2.jpg" alt="Interior">
+                <div class="project-title">View Office B</div>
+            </a>
+        </div>
+
+        <script>
+            // JS remains the same as it correctly selects '.carousel-item'
+            const items = document.querySelectorAll('.carousel-item');
+            const numItems = items.length;
+            const rotateYInterval = 360 / numItems;
+            const radius = 350; /* Adjust this value to change circle size */
+
+            items.forEach((item, index) => {
+                const angle = rotateYInterval * index;
+                item.style.transform =
+                    `rotateY(${angle}deg) translateZ(${radius}px)`;
+            });
+        </script>
+</body>
+
+</html>
