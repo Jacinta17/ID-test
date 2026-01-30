@@ -1,0 +1,65 @@
+/*work html code*/
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.work-grid {
+    display: grid;
+    /* Creates 3 columns of equal size on large screens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* Space between the images */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.caption {
+    padding: 15px;
+    text-align: left;
+    background-color: white;
+}
+
+.caption h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.caption p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Make the grid responsive for smaller screens */
+@media (max-width: 900px) {
+    .work-grid {
+        /* Change to 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .work-grid {
+        /* Stack into 1 column on mobile */
+        grid-template-columns: 1fr;
+    }
+}

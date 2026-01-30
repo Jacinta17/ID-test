@@ -1,0 +1,99 @@
+/* Section wrapper */
+.carousel-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* STACK heading + carousel */
+    align-items: center;
+    /* horizontal center */
+    justify-content: flex-start;
+    /* start from top */
+    padding-top: 40px;
+    gap: 40px;
+    /* space between heading & carousel */
+    overflow: hidden;
+}
+
+/* Our work heading */
+.carousel-section h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin: 50;
+}
+
+/* Carousel container */
+.carousel-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+}
+
+/* Carousel */
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: spin 35s infinite linear;
+}
+
+.carousel-container:hover .carousel {
+    animation-play-state: paused;
+}
+
+/* Carousel items */
+.carousel-item {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    left: 0;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-title {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+/* Rotation */
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .work-image img {
+        height: 220px;
+    }
+}
