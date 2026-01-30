@@ -23,49 +23,13 @@
             height: 200px;
             object-fit: cover;
         }
-
-        .main {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #B7A7A9;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 600;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            margin: 0;
-        }
-
-        .nav-links li a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 500;
-        }
-
-        /* Hamburger stays right */
-        .hamburger {
-            display: none;
-        }
     </style>
 </head>
 
 <body>
 
     <!-- ================= NAV ================= -->
-    <header class="main">
+    <header class="navbar">
         <div class="logo">Studio</div>
 
         <ul class="nav-links" id="navLinks">
@@ -75,7 +39,9 @@
         </ul>
 
         <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
 

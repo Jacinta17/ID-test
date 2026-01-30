@@ -30,6 +30,7 @@ body {
     display: flex;
     align-items: center;
     z-index: 1000;
+    background-color: #B7A7A9;
 }
 
 .logo {
