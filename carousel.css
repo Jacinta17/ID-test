@@ -97,3 +97,26 @@
         height: 220px;
     }
 }
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 320px;
+        /* increased from 200px */
+        height: 280px;
+        /* increased so bottom text shows */
+    }
+
+    .carousel-item {
+        width: 300px;
+        /* same as before */
+        height: 280px;
+        /* increased so title fits */
+        top: 0;
+        /* prevents clipping at bottom */
+    }
+
+    .carousel-item img {
+        height: 210px;
+        /* keeps image proportion + leaves space for text */
+    }
+}

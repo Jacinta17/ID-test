@@ -63,3 +63,51 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========== FIT FIX (DO NOT TOUCH EXISTING CODE ABOVE) ========== */
+
+/* Remove extra padding that breaks Bootstrap layout */
+body {
+    padding: 0;
+}
+
+/* Keep spacing only for your content, not the whole page */
+.page-wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Stop horizontal overflow on all devices */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Make Bootstrap cards behave properly */
+.card {
+    width: 100%;
+}
+
+/* Ensure images don’t overflow their cards */
+.card img {
+    max-width: 100%;
+}
+
+/* ===== MOBILE FIXES ONLY ===== */
+@media (max-width: 768px) {
+
+    /* Reduce top gap so content isn’t pushed too low */
+    .page-wrapper {
+        padding-top: 90px;
+    }
+
+    /* Make text breathe on small screens */
+    .mb-5 h1 {
+        font-size: 1.9rem;
+    }
+
+    .mb-5 p {
+        font-size: 0.95rem;
+    }
+}
