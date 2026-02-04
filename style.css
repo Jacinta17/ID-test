@@ -51,17 +51,45 @@ body {
     font-size: 0.95rem;
 }
 
-/* ------------------- HAMBURGER ------------------- */
+/* ------------------- MOBILE ONLY HAMBURGER ------------------- */
 .hamburger {
     display: none;
-    cursor: pointer;
 }
 
-.hamburger span {
-    display: block;
-    width: 26px;
-    height: 2px;
-    background: var(--white);
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        margin-left: auto;
+        z-index: 1500;
+    }
+
+    .hamburger span {
+        width: 26px;
+        height: 2px;
+        background: #ffffff;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 30px 0;
+        text-align: center;
+        z-index: 1400;
+    }
 }
 
 /* ------------------- HERO ------------------- */
