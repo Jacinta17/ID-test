@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     z-index: 1000;
-    background-color: #B7A7A9;
+    background-color: #91766E;
 }
 
 .logo {
@@ -494,4 +494,17 @@ textarea:focus {
 body {
     margin: 0;
     padding: 0;
+}
+
+/* ===== SUBTLE POP-UP ON SCROLL ===== */
+
+.pop-on-scroll {
+    transform: translateY(40px) scale(0.96);
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pop-on-scroll.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
 }

@@ -1,19 +1,24 @@
-/* ================= SCROLL REVEAL ================= */
-const revealEls = document.querySelectorAll(".reveal, .reveal-scale, .split-text, .mask-reveal");
+/* ===== BETTER SCROLL POP-UP (APPEARS + DISAPPEARS) ===== */
+
+const revealEls = document.querySelectorAll(
+    ".reveal, .reveal-scale, .pop-on-scroll"
+);
 
 const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
+    (entries) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                observer.unobserve(entry.target);
+                entry.target.classList.add("active");   // pop in
+            } else {
+                entry.target.classList.remove("active"); // pop back out when scrolling away
             }
         });
     },
     {
-        threshold: 0.1,
-        rootMargin: "0px 0px -10% 0px"
-    });
+        threshold: 0.15
+    }
+);
+
 revealEls.forEach(el => observer.observe(el));
 
 // JS remains the same as it correctly selects '.carousel-item'
